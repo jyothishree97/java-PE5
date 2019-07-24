@@ -26,9 +26,17 @@ public class SortingTest {
     }
     @Test
     public void givenStringArrayShouldReturnSortedArray(){
-        String expected="Alice Bluto Eugene Harry Olive";
+        String expected="[Alice, Bluto, Eugene, Harry, Olive]";
         String str="Olive Harry Bluto Alice Eugene";
-        String actual=sorting.sortingArray(str);
+        String actual=sorting.sortingArray((str).split(" ")).toString();
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void givenStringArrayShouldReturnEmptyBraces(){
+        String expected="[]";
+        String str="";
+        String actual=sorting.sortingArray((str).split("")).toString();
         assertEquals(expected,actual);
     }
 }
