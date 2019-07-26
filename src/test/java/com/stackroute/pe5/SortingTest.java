@@ -39,4 +39,5 @@ public class SortingTest {
         String actual=sorting.sortingArray((str).split("")).toString();
         assertEquals(expected,actual);
     }
+
 }
